@@ -1,0 +1,63 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build clock",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "clock",
+                "clock.c"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build: gcc -o clock clock.c"
+        },
+        {
+            "label": "Build and Run clock (24h)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "clock",
+                "clock.c",
+                "&&",
+                "./clock"
+            ],
+            "group": "none",
+            "problemMatcher": ["$gcc"],
+            "detail": "Build and run clock in 24-hour format"
+        },
+        {
+            "label": "Build and Run clock (12h)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "clock",
+                "clock.c",
+                "&&",
+                "./clock",
+                "12"
+            ],
+            "group": "none",
+            "problemMatcher": ["$gcc"],
+            "detail": "Build and run clock in 12-hour format"
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                "-f",
+                "clock"
+            ],
+            "group": "none",
+            "detail": "Remove the compiled binary"
+        }
+    ]
+}
