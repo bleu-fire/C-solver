@@ -32,7 +32,9 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/clock",
-            "args": ["12"],
+            "args": [
+                "12"
+            ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],

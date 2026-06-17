@@ -1,41 +1,36 @@
-#include  <stdio.h>
-#include  <time.h>
-#include  <unistd.h>
-#include  <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main()
+{
 
 
-int main  (){
-    int hour  , minute , second;
-    hour = minute =  second = 0;
-    while(1){
-      system("clear");
-      printf("%02d:%02d:%02d",hour,minute,second);
+  int  hour = 0 ,minute =0, second = 0;
 
-      //free buffer
-      fflush(stdout);
-      sleep(1);
-      second++;
+  while (1)
+  {
 
-    if(second==60){
-      second = 0 ;
+    printf("\r%02d:%02d:%02d", hour, minute, second);
+    fflush(stdout);
+    sleep(1);
+    second++;
+
+    if (second == 60)
+    {
+      second = 0;
       minute++;
-
     }
-    
-    if(minute==60){
-      hour=1;
-      minute++;
-
+    if (minute == 60)
+    {
+      minute = 0;
+      hour++;
     }
-
-    if(hour==24){
-      hour=0;
-
+    if (hour == 24)
+    {
+      hour =0;
     }
-}
-
-
-
-
-
+  }
 }
