@@ -1,0 +1,14 @@
+CompileFlags:
+  Add:
+    - "-I/usr/include"
+    - "-std=c17"
+  Remove:
+    - "-march=*"
+    - "-mtune=*"
+
+Diagnostics:
+  UnusedIncludes: Strict
+  MissingIncludes: Strict
+
+Index:
+  Background: Build

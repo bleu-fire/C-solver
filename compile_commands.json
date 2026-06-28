@@ -1,0 +1,12 @@
+[
+  {
+    "directory": "/home/arch/Desktop/C-solver",
+    "command": "gcc -std=c17 -I/usr/include -c fl_enc.c -o decr_enc.o",
+    "file": "fl_enc.c"
+  },
+  {
+    "directory": "/home/arch/Desktop/C-solver",
+    "command": "gcc -std=c17 -I/usr/include -c JWT.c -o JWT.o",
+    "file": "JWT.c"
+  }
+]
